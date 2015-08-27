@@ -16,8 +16,9 @@ var makeDancer = function(top, left, timeBetweenSteps){
 makeDancer.prototype.step = function(){
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
-  // function(){step.call(makeDancer)}
+  var context = this; //this = makeDancer before invoking setTimeout, need to save this as separate variable (context) bc when invoke setTimeout, this is changed to window
+  setTimeout(function(){context.step()}, this.timeBetweenSteps);
+  // this.step.bind(this);
 };
 
 makeDancer.prototype.setPosition = function(top, left){
