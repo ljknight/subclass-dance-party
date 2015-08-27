@@ -3,11 +3,15 @@
   <head>
     <title>Dolores Park Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Rye' rel='stylesheet' type='text/css'>
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
     <script src="src/nakedDancer.js"></script>
     <script src="src/pbrDancer.js"></script>
+    <script src="src/hipsterDancer.js"></script>
+    <audio id="tswift" paused src='audio/shakeitoff.mp3' loop></audio>
   </head>
   <body>
     <div class="topbar">
@@ -15,10 +19,19 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a burrito!</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeDogDancer">add a boo!</a>      
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="makePBRDancer">add a pbr!</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeHipsterDancer">Hipsterfy</a> 
+      <a href="#" class="Hipster" data-dancer-maker-function-name="makeHipsterDancer">Hipsterfy</a> 
+      <a href="#" class="prideButton" data="pride">Pridefy!</a>
       <a href="#" class="lineUpButton" data="lineUp">SF Lineup</a>
       <a href="#" class="cancanButton" data="cancan">Can Can</a>
-
+      <div class="overlay"></div>
+      <div class="prideBars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+      </div>
     </div>
     <script src="src/init.js"></script>
   </body>

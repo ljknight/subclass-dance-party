@@ -5,21 +5,97 @@ body{
   margin: 0px;
   background: url('photos/dolores-park.jpg');
   background-size: cover;
-  font-size: 18px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 28px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #000;
 }
-.title, .addDancerButton{
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #5E2612;
+  opacity: 0.6;
+/*  z-index: 1;*/
+  left: 0;
+  top: 60px;
+}
+
+.prideBars {
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: .5;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+.prideBars > div {
+  height: 16.66666666666667%; /* 100% / 6 */
+  width: 100%;
+}
+
+.bar1 {
+  background: #ff3e18;
+}
+
+.bar2 {
+  background: #fc9a00;
+}
+
+.bar3 {
+  background: #ffd800;
+}
+
+.bar4 {
+  background: #39ea7c;
+}
+
+.bar5 {
+  background: #0bb2ff;
+}
+
+.bar6 {
+  background: #985aff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Hipster:hover {
+  font-family: 'Rye', cursive;
+  margin-top: 5px;
+  font-size:22px;
+}
+
+.prideButton:hover {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.title, .addDancerButton, .lineUpButton, .cancanButton, .Hipster, .prideButton{
   padding:5px 12px;
-  float:right;
+  float:left;
 }
+
+.addDancerButton, .lineUpButton, .cancanButton, .Hipster, .prideButton {
+  padding-top: 10px;
+}
+
 .topbar{
-  height:32px;
+  height:60px;
   background-color: #fff;
 }
 .title{
   background-color: #fff;
+  font-size: 36px;
 }
 
 .dancer{
@@ -29,9 +105,15 @@ body, a:link, a:visited, a:active{
   display: none;
 }
 
+.hipster {
+  display: block;
+  content: url('photos/hipsters.png');
+  height: 150px;
+}
+
 .burrito {
   display: block;
-  content: url('photos/burrito.png');
+  content: url('photos/mission-burrito-gif.gif');
   height: 100px;
 }
 
