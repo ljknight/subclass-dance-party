@@ -18,3 +18,8 @@ makePBRDancer.prototype.step = function(){
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.addClass('pbr');
 };
+
+makePBRDancer.prototype.show = function(){
+  this.$node.css('display', 'block');
+  this.$node.fadeOut("fast").animate({top: '50%'}, "fast").fadeIn();
+};

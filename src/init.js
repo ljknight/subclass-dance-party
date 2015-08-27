@@ -28,6 +28,34 @@ $(document).ready(function(){
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer);
   });
+
+
+  $(".lineUpButton").on("click", function(event){
+    var lineUp = $(this).data("lineUp");
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+  });
+
+$(".cancanButton").on("click", function(event){
+    var cancan = $(this).data("cancan");
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].show(); 
+    }
+  });
+
+$("body").on("mouseover", ".dog", function(){
+    doBounce($(this), 3, '100px', 300);
+  });
+
+function doBounce(element, times, distance, speed) {
+    for(var i = 0; i < times; i++) {
+        element.animate({top: '-='+distance}, speed)
+            .animate({top: '+='+distance}, speed);
+    }        
+}
+
 });
 

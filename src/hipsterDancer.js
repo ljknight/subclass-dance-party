@@ -20,3 +20,7 @@ makeHipsterDancer.prototype.step = function(){
   this.$node.addClass('hipster');
   this.$node.toggle();
 };
+
+makeHipsterDancer.prototype.show = function(){
+  this.$node.css('display', 'none');
+};

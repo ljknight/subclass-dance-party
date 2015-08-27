@@ -23,18 +23,21 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
   position:absolute;
   top: 100px;
   left: 100px;
   display: none;
 }
 
+.burrito {
+  display: block;
+  content: url('photos/burrito.png');
+  height: 100px;
+}
+
 .pbr {
   display: block;
   content: url('photos/PBR.jpg');
-  border: none;
   height: 100px; 
   -webkit-animation-name: spin;
   -webkit-animation-duration: 4000ms;
@@ -113,4 +116,53 @@ body, a:link, a:visited, a:active{
       -webkit-transform: translateY(0%);
       }     
     }
+  }
+
+  .fade {
+    animation-name: fadeIn;
+  -webkit-animation-name: fadeIn; 
+
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-in-out; 
+  -webkit-animation-timing-function: ease-in-out;   
+
+  visibility: visible !important; 
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+    opacity: 0.0;   
+  }
+  60% {
+    transform: scale(1.1);  
+  }
+  80% {
+    transform: scale(0.9);
+    opacity: 1; 
+  } 
+  100% {
+    transform: scale(1);
+    opacity: 1; 
+  }   
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0.0;   
+  }
+  60% {
+    -webkit-transform: scale(1.1);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+    opacity: 1; 
+  } 
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1; 
+  }   
   }
