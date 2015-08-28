@@ -34,8 +34,12 @@ $(document).ready(function(){
 
   $(".lineUpButton").on("click", function(event){
     var lineUp = $(this).data("lineUp");
+    var leftSpacing = 100/window.dancers.length;
+    var leftPosition = 0;
     for (var i = 0; i < window.dancers.length; i++) {
       window.dancers[i].lineUp();
+      window.dancers[i].$node.animate({left: leftPosition.toString() + "%"});
+      leftPosition += leftSpacing;
     }
   });
 
@@ -48,6 +52,10 @@ $(".cancanButton").on("click", function(event){
 
 $(".prideButton").on("click", function(event){
   $(".prideBars").toggle();
+});
+
+$(".title").on("click", function(event){
+  location.reload();
 });
 
 $(".Hipster").on("click", function(event){

@@ -80,12 +80,12 @@ a {
   background-clip: text;
 }
 
-.title, .addDancerButton, .lineUpButton, .cancanButton, .Hipster, .prideButton{
+.title, .addDancerButton, .lineUpButton, .cancanButton, .Hipster, .prideButton, .burritoButton{
   padding:5px 12px;
   float:left;
 }
 
-.addDancerButton, .lineUpButton, .cancanButton, .Hipster, .prideButton {
+.addDancerButton, .lineUpButton, .cancanButton, .Hipster, .prideButton, .burritoButton {
   padding-top: 10px;
 }
 
