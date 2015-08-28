@@ -23,6 +23,15 @@ body, a:link, a:visited, a:active{
   top: 60px;
 }
 
+.smoke {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-image: url('photos/smoke.jpg');
+  background-size: cover;
+  opacity: 0.8;
+}
+
 .prideBars {
   display: none;
   height: 100%;
@@ -115,6 +124,10 @@ a {
   display: block;
   content: url('photos/mission-burrito-gif.gif');
   height: 100px;
+}
+
+.big {
+  transform: scale(3);
 }
 
 .pbr {

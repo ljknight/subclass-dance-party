@@ -58,6 +58,10 @@ $(".title").on("click", function(event){
   location.reload();
 });
 
+$(".burritoButton").on("click", function(event){
+  $('.burrito').toggleClass('big');
+});
+
 $(".Hipster").on("click", function(event){
     var hipsterMakerFunction = window["makeHipsterDancer"];
     var hipster = new hipsterMakerFunction(
@@ -97,6 +101,10 @@ function doBounce(element, times, distance, speed) {
             .animate({top: '+='+distance}, speed);
     }        
 }
+
+window.setTimeout(function() {
+  $('.smoke').fadeIn(15000);
+}, 1000);
 
 });
 
