@@ -103,7 +103,7 @@ function doBounce(element, times, distance, speed) {
 }
 
 window.setTimeout(function() {
-  $('.smoke').fadeIn(15000);
+  $('.smoke').fadeIn(30000);
 }, 1000);
 
 });
