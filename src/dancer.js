@@ -1,4 +1,3 @@
-// Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps){
 
   // use jQuery to create an HTML <span> tag
@@ -8,23 +7,20 @@ var makeDancer = function(top, left, timeBetweenSteps){
   this.timeBetweenSteps = timeBetweenSteps;
   this.step();
 
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
+  // this sets the position to some random default point within the body
   this.setPosition(this.top, this.left);
 };
 
 makeDancer.prototype.step = function(){
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
-  var context = this; //this = makeDancer before invoking setTimeout, need to save this as separate variable (context) bc when invoke setTimeout, this is changed to window
+  
+  var context = this; //this = makeDancer before invoking setTimeout, but this = window inside of setTimeout
   setTimeout(function(){context.step()}, this.timeBetweenSteps);
-  // this.step.bind(this);
+  // setTimeout(this.step.bind(this), this.timeBetweenSteps); - also works: binds the last instance of this.step to the current this
 };
 
 makeDancer.prototype.setPosition = function(top, left){
-  // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-  //
   var styleSettings = {
     top: top,
     left: left
@@ -32,10 +28,12 @@ makeDancer.prototype.setPosition = function(top, left){
   this.$node.css(styleSettings);
 };
 
+// moves all dancers to the middle of page
 makeDancer.prototype.lineUp = function(){
   this.$node.fadeOut("fast").animate({top: '50%'}, "fast").fadeIn();
 };
 
-makeDancer.prototype.show = function(){
+// hides every element except pbr cans (overridden on pbr subclass)
+makeDancer.prototype.cancan = function(){
   this.$node.css('display', 'none');
 };
